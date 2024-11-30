@@ -1,25 +1,26 @@
 :root {
-    // dark
-    --color-sidebar-background-dark-default: #202127;
-    --color-sidebar-background-dark-hover: #2D2E34;
-    --color-sidebar-background-dark-active: #393A3F;
-    --color-text-dark-default: #f0f2ff;
-    --color-text-dark-hover: #f0f2ff;
-    --color-text-dark-active: #f0f2ff;
-    --color-text-logo-dark-default: #3B82F6;
-    --color-button-background-dark-default: #202127;
-    --color-button-background-dark-active: #4B5966;
+  // dark
+  --color-sidebar-background-dark-default: #202127;
+  --color-sidebar-background-dark-hover: #2d2e34;
+  --color-sidebar-background-dark-active: #393a3f;
+  --color-text-dark-default: #f0f2ff;
+  --color-text-dark-hover: #f0f2ff;
+  --color-text-dark-active: #f0f2ff;
+  --color-text-logo-dark-default: #3b82f6;
+  --color-button-background-dark-default: #202127;
+  --color-button-background-dark-active: #4b5966;
 
-    // light
-    --color-sidebar-background-light-default: #fff;
-    --color-sidebar-background-light-hover: #f0f2ff;
-    --color-sidebar-background-light-active: #f0f2ff;
-    --color-text-light-default: #97a5b9;
-    --color-text-light-hover: #091b31;
-    --color-text-light-active: #0000b5;
-    --color-text-logo-light-default: #0000b5;
-    --color-button-background-light-default: #fff;
-    --color-button-background-light-active: #e2e8f0;
+  // light
+  --color-sidebar-background-light-default: #fff;
+  --color-sidebar-background-light-hover: #f0f2ff;
+  --color-sidebar-background-light-active: #f0f2ff;
+  --color-text-light-default: #97a5b9;
+  --color-text-light-hover: #091b31;
+  --color-text-light-active: #0000b5;
+  --color-text-background-light-active: #0000b510;
+  --color-text-logo-light-default: #0000b5;
+  --color-button-background-light-default: #fff;
+  --color-button-background-light-active: #e2e8f0;
 }
 
 html {
@@ -28,4 +29,26 @@ html {
   line-height: 1.5;
   background-color: #e2e8f0;
   color: rgba(255, 255, 255, 0.87);
+}
+
+.sidebar .sidebar-inner {
+  background-color: var(--color-sidebar-background-light-default);
+  color: var(--color-text-light-default);
+  font-weight: bold;
+  border-radius: 1rem;
+  width: 200px;
+  height: 95%;
+  position: fixed;
+  padding: 1rem;
+  transition: 0.25s ease all;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  // overflow: hidden;
+}
+
+[data-theme="dark"] {
+  .sidebar-inner {
+    background-color: var(--color-sidebar-background-dark-default);
+  }
 }
